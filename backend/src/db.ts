@@ -20,3 +20,5 @@ export async function getUrl(slug: string): Promise<string | null> {
 
   return result === null ? result : result.url
 }
+
+
