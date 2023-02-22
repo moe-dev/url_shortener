@@ -21,7 +21,7 @@ router.put('/url', (async (_req, res) => {
   }
   const slug = generateRandomString()
   await db.createUrl(url, slug)
-  res.json({slug: slug})
+  res.json({url: url, slug: slug})
   }
   catch(e){  
     res.status(400).send(e)
@@ -34,7 +34,7 @@ router.get('/:slug', (async (_req, res) => {
   if (!url){
     throw new Error ("Url Does Not Exist")
   }
-  res.json({url:url})
+  res.redirect(url)
   }
   catch(e){  
     res.status(400).send(e)

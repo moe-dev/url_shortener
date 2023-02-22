@@ -11,6 +11,6 @@ export function generateRandomString() {
 }
 
 export function isValidUrl(url:string) {
-    const urlRegex = /^(?:(ftp|http|https):\/\/)?[^\s/$.?#].[^\s]*$/;
+    const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
     return urlRegex.test(url);
   }
