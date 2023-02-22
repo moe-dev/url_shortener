@@ -4,9 +4,9 @@ import * as db from './db'
 import { generateRandomString, isValidUrl } from './utils'
 // import logger from './lib/logger'
 import { RequestHandler } from 'express'
-
+var cors = require('cors');
 const router = Router()
-
+router.use(cors())
 router.get('/health', (_, res) => res.sendStatus(200))
 
 router.get('/hello', (_, res) => {

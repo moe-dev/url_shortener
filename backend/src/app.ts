@@ -2,7 +2,6 @@ import express, { Express } from 'express'
 import pino, { Options } from 'pino-http'
 import errorHandler from './middleware/error'
 import routes from './routes'
-
 export function makeApp(): Express {
   const app = express()
   // Prettify logs in dev
@@ -34,7 +33,7 @@ export function makeApp(): Express {
       message: 'Not Found'
     })
   })
+ 
   return app
 }
-
 export const app = makeApp()
